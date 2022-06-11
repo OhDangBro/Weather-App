@@ -26,18 +26,19 @@
                 <h2>WEATHER INPUT</h2>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary" type="submit">Button</button>
+                        <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary"
+                            type="submit">Button</button>
                     </div>
                     <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default">
                 </div>
                 <h2 id="list" class="weatherLocation">Your Favorites:</h2>
-                
+
 
             </div>
             <h2 id="foreCast">Weather Forecast</h2>
-            </div>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -46,28 +47,51 @@
 
         const api = "32adaa67c2a8d2e40f3ba802329d956b";
 
+        //Add class to appended LI
+
+       
+
+        
+
         //Appends weather input and adds to favorites
         function addLi() {
             var li =document.createElement("li");
+            $(li).addClass( "bg-info" );
             var cityLocation = document.getElementById("textValue").value;
-            var textNode = document.createTextNode(cityLocation)
+            var textNode = document.createTextNode(cityLocation);
             li.appendChild(textNode);
             document.getElementById("list").appendChild(li);
         };
+
+        
+
         //Appends weather location
         function addWeather() {
-            var li =document.createElement("li");
+            var li = document.createElement("li");
             var cityLocation = document.getElementById("textValue").value;
             var textNode = document.createTextNode("The Weather in " + cityLocation + ": ")
             console.log("this")
-           li.appendChild(textNode);
-           document.getElementById("foreCast").appendChild(li);
-           console.log("it works");
+            li.appendChild(textNode);
+            document.getElementById("foreCast").appendChild(li);
         };
 
-            
-        
-        
+        function addClass() {
+        li.className = "bg-info"; 
+       }
+
+       addClass();
+
+
+
+        // var getWeatherApi = function () {
+        //     console.log("function was called");
+        // };
+
+        // getWeatherApi();
+
+
+
+
 
 
 
