@@ -26,22 +26,16 @@
                 <h2>WEATHER INPUT</h2>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <button onclick="addLi()" id="buttonClicker" class="btn btn-primary" type="submit">Button</button>
+                        <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary" type="submit">Button</button>
                     </div>
                     <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default">
                 </div>
-                <h2 id="list" class="weatherLoListcation">List</h2>
+                <h2 id="list" class="weatherLocation">Your Favorites:</h2>
                 
 
             </div>
-            <div class="col-6 bg-info">WEATHER <ul id="weatherList" class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+            <h2 id="foreCast">Weather Forecast</h2>
             </div>
         </div>
     </div>
@@ -52,35 +46,7 @@
 
         const api = "32adaa67c2a8d2e40f3ba802329d956b";
 
-        // Get location on load
-
-        //     window.addEventListener('load', () => {});
-
-        //     window.addEventListener('load', () => {
-        //   let long;
-        //   let lat;
-        //   // Accessing Geolocation of User
-        //   if (navigator.geolocation) {
-        //     navigator.geolocation.getCurrentPosition((position) => {
-
-        //     });
-        //   }
-        // });
-
-        // End of get location on load.
-
-
-        //    function getInputValue() {
-        //        var inputValueGotcha = document.getElementbyId("inputValue").value;
-        //        console.log("inputValue")
-        //    };
-
-        $("#buttonClicker").click(function () {
-            console.log("this worked");
-            $(".weatherLocationList").append("bah")
-
-        });
-
+        //Appends weather input and adds to favorites
         function addLi() {
             var li =document.createElement("li");
             var cityLocation = document.getElementById("textValue").value;
@@ -88,7 +54,19 @@
             li.appendChild(textNode);
             document.getElementById("list").appendChild(li);
         };
+        //Appends weather location
+        function addWeather() {
+            var li =document.createElement("li");
+            var cityLocation = document.getElementById("textValue").value;
+            var textNode = document.createTextNode("The Weather in " + cityLocation + ": ")
+            console.log("this")
+           li.appendChild(textNode);
+           document.getElementById("foreCast").appendChild(li);
+           console.log("it works");
+        };
 
+            
+        
         
 
 
