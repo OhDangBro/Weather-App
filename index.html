@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!-- START Project-->
+
+<body class="container">
+
+   
+        <div class="container">
+            <div class="row">
+                <div class="col-9 bg-primary"><header>WEATHER</header></div>
+                <div class="col-4 bg-danger">
+   
+    <h2>WEATHER INPUT</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="buttonClicker">Default</span>
+        </div>
+        <input type="text" class="form-control" id="inputValue" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+    <ol>List</ol>
+    <li>placeholder</li>
+
+    </div>
+    <div class="col-6 bg-info">WEATHER <ul id="weatherList" class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script>
+
+    const api = "32adaa67c2a8d2e40f3ba802329d956b";
+
+   
+
+
+   function getInputValue() {
+       var inputValueGotcha = document.getElementbyId("inputValue").value;
+       console.log("inputValue")
+   };
+
+    $("#buttonClicker").click(function() {
+        console.log("this worked");
+        $("#weatherList").append("<li> plz work </li>")
+    })
+
+
+   
+
+    
+
+
+
+
+
+    
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+  
+
+   
+
