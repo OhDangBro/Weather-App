@@ -15,76 +15,92 @@
 
 <body class="container">
 
-   
-        <div class="container">
-            <div class="row">
-                <div class="col-9 bg-primary"><header>WEATHER</header></div>
-                <div class="col-4 bg-danger">
-   
-    <h2>WEATHER INPUT</h2>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="buttonClicker">Default</span>
-        </div>
-        <input type="text" class="form-control" id="inputValue" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
-    </div>
-    <ol>List</ol>
-    <li>placeholder</li>
 
-    </div>
-    <div class="col-6 bg-info">WEATHER <ul id="weatherList" class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-    </div>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9 bg-primary">
+                <header>WEATHER</header>
+            </div>
+            <div class="col-4 bg-danger">
+
+                <h2>WEATHER INPUT</h2>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button onclick="addLi()" id="buttonClicker" class="btn btn-primary" type="submit">Button</button>
+                    </div>
+                    <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+                <h2 id="list" class="weatherLoListcation">List</h2>
+                
+
+            </div>
+            <div class="col-6 bg-info">WEATHER <ul id="weatherList" class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script>
+    <script>
 
-    const api = "32adaa67c2a8d2e40f3ba802329d956b";
+        const api = "32adaa67c2a8d2e40f3ba802329d956b";
 
-   
+        // Get location on load
 
+        //     window.addEventListener('load', () => {});
 
-   function getInputValue() {
-       var inputValueGotcha = document.getElementbyId("inputValue").value;
-       console.log("inputValue")
-   };
+        //     window.addEventListener('load', () => {
+        //   let long;
+        //   let lat;
+        //   // Accessing Geolocation of User
+        //   if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition((position) => {
 
-    $("#buttonClicker").click(function() {
-        console.log("this worked");
-        $("#weatherList").append("<li> plz work </li>")
-    })
+        //     });
+        //   }
+        // });
 
-
-   
-
-    
-
+        // End of get location on load.
 
 
+        //    function getInputValue() {
+        //        var inputValueGotcha = document.getElementbyId("inputValue").value;
+        //        console.log("inputValue")
+        //    };
+
+        $("#buttonClicker").click(function () {
+            console.log("this worked");
+            $(".weatherLocationList").append("bah")
+
+        });
+
+        function addLi() {
+            var li =document.createElement("li");
+            var cityLocation = document.getElementById("textValue").value;
+            var textNode = document.createTextNode(cityLocation)
+            li.appendChild(textNode);
+            document.getElementById("list").appendChild(li);
+        };
+
+        
 
 
-    
-</script>
+
+
+
+
+
+
+
+
+
+    </script>
 
 </body>
-
-
-
-
-
-
-
-
-  
-
-   
-
