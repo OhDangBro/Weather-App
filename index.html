@@ -10,76 +10,113 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link href="./assets/homepage.js">
+
+     
+  
+
 
     <!-- START Project-->
-
-<body class="container">
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-9 bg-primary">
-                <header>WEATHER</header>
-            </div>
-            <div class="col-4 bg-danger">
-
-                <h2>WEATHER INPUT</h2>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary"
-                            type="submit">Button</button>
-                    </div>
-                    <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default">
-                </div>
-                <h2 id="list" class="weatherLocation">Your Favorites:</h2>
-
-
-            </div>
-            <h2 id="foreCast">Weather Forecast</h2>
+    <!-- Jumbotron Strart-->
+    <div class="jumbotron jumbotron-fluid border border-dark">
+        <div class="container">
+            <h1 class="display-4 w-100 p-3" style="background-color: #eee;">Your Weather</h1>
+            <p class="lead">A weather API site.</p>
         </div>
     </div>
+    <!--Jumbotron End-->
+
+
+<body class="bg-info">
+
+    <div class="container">
+
+        <!-- WEATHER COLUMN-->
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col-9 .bg-secondary">
+                    <header>WEATHER</header>
+                </div>
+                <div class="col-4 .bg-secondary border border-dark">
+
+                    <!-- WEATHER COLUMN END-->
+
+                    <main class="flex-row justify-space-between">
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <h3 class="card-header text-uppercase">Search By Location</h3>
+                                <form id="user-forms" class="card-body">
+                                  <label class="form-label" for="username">Submit</label>
+                                  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                                  <button type="submit" class="btn">Get User</button>
+                                </form>
+                              </div>
+                        </div>
+                      
+                        <div class="col-12 col-md-8"></div>
+                      </main>
+                     
+                    <!-- WEATHER INPUT START
+                    <h2>WEATHER INPUT</h2>
+                    <div class="input-group mb-3 border border-dark">
+                        <div class="input-group-prepend">
+                            <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary"
+                                type="submit">Button</button>
+                        </div>
+                        <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <h2 id="list" class="weatherLocation">Your Favorites:</h2> -->
+                    <!--WEATHER INPUT END-->
+
+
+                </div class="border border-dark">
+                <h2 id="foreCast" class="border border-dark">Weather Forecast</h2>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script>
 
-        const api = "32adaa67c2a8d2e40f3ba802329d956b";
+        
 
         //Add class to appended LI
 
-       
+
+
+
+
+        // //Appends weather input and adds to favorites
+        // function addLi() {
+        //     var li = document.createElement("li");
+        //     $(li).addClass("bg-info border border-dark rounded-pill");
+        //     var cityLocation = document.getElementById("textValue").value;
+        //     var textNode = document.createTextNode(cityLocation);
+        //     li.appendChild(textNode);
+        //     document.getElementById("list").appendChild(li);
+        // };
+
+
+
+        // //Appends weather location
+        // function addWeather() {
+        //     var li = document.createElement("li");
+        //     var cityLocation = document.getElementById("textValue").value;
+        //     var textNode = document.createTextNode("The Weather in " + cityLocation + ": ")
+        //     console.log("this")
+        //     li.appendChild(textNode);
+        //     document.getElementById("foreCast").appendChild(li);
+        // };
+
+        var userFormEl = document.querySelector(".card-body");
+        var nameInputEl = document.querySelector("#username");
+        var name = document.querySelector(".name");
+        var description = document.querySelector(".description");
+        var temp = document.querySelector(".temp");
 
         
-
-        //Appends weather input and adds to favorites
-        function addLi() {
-            var li =document.createElement("li");
-            $(li).addClass( "bg-info" );
-            var cityLocation = document.getElementById("textValue").value;
-            var textNode = document.createTextNode(cityLocation);
-            li.appendChild(textNode);
-            document.getElementById("list").appendChild(li);
-        };
-
-        
-
-        //Appends weather location
-        function addWeather() {
-            var li = document.createElement("li");
-            var cityLocation = document.getElementById("textValue").value;
-            var textNode = document.createTextNode("The Weather in " + cityLocation + ": ")
-            console.log("this")
-            li.appendChild(textNode);
-            document.getElementById("foreCast").appendChild(li);
-        };
-
-        function addClass() {
-        li.className = "bg-info"; 
-       }
-
-       addClass();
 
 
 
@@ -104,5 +141,7 @@
 
 
     </script>
+
+    </div>
 
 </body>
