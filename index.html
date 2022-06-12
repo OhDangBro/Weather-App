@@ -40,33 +40,17 @@
                 <div class="col-4 .bg-secondary border border-dark">
 
                     <!-- WEATHER COLUMN END-->
-
-                    <main class="flex-row justify-space-between">
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <h3 class="card-header text-uppercase">Search By Location</h3>
-                                <form id="user-forms" class="card-body">
-                                  <label class="form-label" for="username">Submit</label>
-                                  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-                                  <button type="submit" class="btn">Get User</button>
-                                </form>
-                              </div>
-                        </div>
-                      
-                        <div class="col-12 col-md-8"></div>
-                      </main>
                      
-                    <!-- WEATHER INPUT START
+                    <!-- WEATHER INPUT START -->
                     <h2>WEATHER INPUT</h2>
                     <div class="input-group mb-3 border border-dark">
                         <div class="input-group-prepend">
-                            <button onclick="addLi(); addWeather();" id="buttonClicker" class="btn btn-primary"
-                                type="submit">Button</button>
+                            <button id="button"> Button</button>
                         </div>
-                        <input type="text" class="form-control" id="textValue" aria-label="Sizing example input"
+                        <input type="text" class="form-control" id="inputValue" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <h2 id="list" class="weatherLocation">Your Favorites:</h2> -->
+                    <h2 id="list" class="weatherLocation">Your Favorites:</h2> 
                     <!--WEATHER INPUT END-->
 
 
@@ -78,7 +62,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script>
+    <script src="./assets/homepage.js"></script>
 
         
 
@@ -115,6 +99,10 @@
         var name = document.querySelector(".name");
         var description = document.querySelector(".description");
         var temp = document.querySelector(".temp");
+        var windIndex = document.querySelector(".wind");
+        var humidity = document.querySelector(".humidity");
+
+        button.addEventListener
 
         
 

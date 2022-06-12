@@ -1,42 +1,20 @@
-const apiUrl = "32adaa67c2a8d2e40f3ba802329d956b";
+var userFormEl = document.querySelector(".card-body");
+        var nameInputEl = document.querySelector("#username");
+        var name = document.querySelector(".name");
+        var description = document.querySelector(".description");
+        var temp = document.querySelector(".temp");
+        var windIndex = document.querySelector(".wind");
+        var humidity = document.querySelector(".humidity");
 
-var formSubmitHandler = function(event) {
-    event.preventDefault();
-    console.log(event);
+        button.addEventListener("click",function() {
+            
 
-    // get value from input element
-var username = nameInputEl.value.trim();
+    fetch("https://api.openweathermap.org/data/2.5/weather?q="+inputValue.value+"&appid=e04fbf348ab68f01c8da11552c3c99df")
+    .then(response => response.json())
+    .then(data => console.log(data))
 
-if (username) {
-  getUserRepos(username);
-  nameInputEl.value = "";
-} else {
-  alert("Please enter a GitHub username");
-}
-  };
+    .catch(err => alert("Please pick a city!"))
 
-  
-
-var getApi = function(user) {
-    // format the github api url
-   
-  
-    // make a request to the url
-    fetch("api.openweathermap.org/data/2.5/weather?q="+inputvalue.Value+"appid=e04fbf348ab68f01c8da11552c3c99df"
+        });
     
 
-        ).then(function(response) {
-      response.json().then(function(data) {
-        console.log(data);
-      });
-    });
-  };
-
-  userFormEl.addEventListener("submit", formSubmitHandler);
-
-
-
-  
-  getApi();
-
-//   "https://api.openweathermap.org/data/2.5/onecall?lat=40.058323&lon=-74.405663&appid=e04fbf348ab68f01c8da11552c3c99df"
