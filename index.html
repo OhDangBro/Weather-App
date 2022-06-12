@@ -13,19 +13,7 @@
     <link href="./assets/homepage.js">
 
 
-    <div class="container">
-  <div class="row">
-    <div class="col align-self-start">
-      One of three columns
-    </div>
-    <div class="col align-self-center">
-      One of three columns
-    </div>
-    <div class="col align-self-end">
-      One of three columns
-    </div>
-  </div>
-</div>
+   
 
      
   
@@ -35,121 +23,91 @@
     <!-- Jumbotron Strart-->
     <div class="jumbotron jumbotron-fluid border border-dark">
         <div class="container">
-            <h1 class="display-4 w-100 p-3" style="background-color: #eee;">Your Weather</h1>
-            <p class="lead">A weather API site.</p>
+            <h1 class="display-4 w-100 p-3 text-center" style="background-color: #eee;">Your Weather</h1>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <input type="text" class="inputValue w-auto-p-3" id="inputValue" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default"></p>
+                  
+                
+                    <div class="input-group-prepend">
+                        <button class="text-center" id="button">Get Your Forecast</button>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    
+                  </div>
+                  <div class="col-sm">
+                    <div class="container">
+                        <div class="row">
+                          <div class="col"><h2 id="list" class="weatherLocation">Your Favorites:</h2> 
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dropdown button
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </div>
+                    
+                    
         </div>
     </div>
+                  </div>
+                </div>
+              </div>
+
+
+            
+                  
+
+
+
+                    
     <!--Jumbotron End-->
 
-
-<body class="bg-info">
-
-    <div class="container">
-
-        <!-- WEATHER COLUMN-->
-        <div class="container border border-dark">
-            <div >
-                <div class="col-9 .bg-secondary row">
-                    <header>WEATHER</header>
-                </div>
-                <div class="col-4 .bg-secondary border border-dark">
-
-                    <!-- WEATHER COLUMN END-->
-                     
-                    <!-- WEATHER INPUT START -->
-                    <h2>WEATHER INPUT</h2>
-                    <div class="input-group mb-3 border border-dark">
-                        <div class="input-group-prepend">
-                            <button id="button"> Button</button>
-                        </div>
-                        <input type="text" class="inputValue" id="inputValue" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <h2 id="list" class="weatherLocation">Your Favorites:</h2> 
-                    <!--WEATHER INPUT END-->
+    <body class="bg-info">
 
 
-                </div class="border border-dark">
+
+
+        <div class="row no-gutters ">
+            <h2 class="text-center">Todays weather:</h2>
+            <h3 class="currentTime"></h3>
+            <div class="col-6 col-md-4"></div></div></div>
+            <div class="list-group list-group-horizontal"> <ol id="foreCast" class="display border "></ol>
+                <li class="name "></li>
+                <li class="description "></li>
+              <li class="temp "></li>
+              <li class="windIndex "></li>
+              <li class="humidity "></li>
+          </div>
+          </div>
+        </div></div>
+            <div class="col-12 col-sm-6 col-md-8">5 day forecast</div>
+          </div>
+
+    
                 
-                <ol id="foreCast" class="display border border-dark">Weather Forecast</ol>
-                <li class="description"></li>
-                <li class="temp"></li>
-                <li class="windIndex"></li>
-                <li class="humidity"></li>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/homepage.js"></script>
-
-        
-
-        <!-- //Add class to appended LI
 
 
+    
 
 
-
-        // //Appends weather input and adds to favorites
-        // function addLi() {
-        //     var li = document.createElement("li");
-        //     $(li).addClass("bg-info border border-dark rounded-pill");
-        //     var cityLocation = document.getElementById("textValue").value;
-        //     var textNode = document.createTextNode(cityLocation);
-        //     li.appendChild(textNode);
-        //     document.getElementById("list").appendChild(li);
-        // };
-
-
-
-        // //Appends weather location
-        // function addWeather() {
-        //     var li = document.createElement("li");
-        //     var cityLocation = document.getElementById("textValue").value;
-        //     var textNode = document.createTextNode("The Weather in " + cityLocation + ": ")
-        //     console.log("this")
-        //     li.appendChild(textNode);
-        //     document.getElementById("foreCast").appendChild(li);
-        // };
-
-        var userFormEl = document.querySelector(".card-body");
-        var nameInputEl = document.querySelector("#username");
-        var name = document.querySelector(".name");
-        var description = document.querySelector(".description");
-        var temp = document.querySelector(".temp");
-        var windIndex = document.querySelector(".wind");
-        var humidity = document.querySelector(".humidity");
-
-        button.addEventListener
+    
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="./assets/homepage.js"></script></div>
+      </div>
 
         
-
-
-
-        // var getWeatherApi = function () {
-        //     console.log("function was called");
-        // };
-
-        // getWeatherApi(); -->
-
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
+     </script>
 
     </div>
 
