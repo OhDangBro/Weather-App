@@ -19,10 +19,10 @@ var userFormEl = document.querySelector(".card-body");
         var descValue = data['weather']['0']['description'];
 
         name.innerHTML =nameValue;
-        temp.innerHTML =tempValue;
-        description.innerHTML =descValue;
-        humidity.innerHTML =humidityValue;
-        wind.innterHTML =windIndexValue;
+        temp.innerHTML ="The Current Temp is : " + tempValue;
+        description.innerHTML ="Its : " + descValue;
+        humidity.innerHTML ="The Humidity Level is : " + humidityValue;
+        wind.innterHTML ="The wind value is : " + windIndexValue;
         console.log(nameValue);
         console.log(tempValue);
         console.log(descValue);
