@@ -11,10 +11,32 @@ var userFormEl = document.querySelector(".card-body");
 
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+inputValue.value+"&appid=e04fbf348ab68f01c8da11552c3c99df")
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+        var nameValue =data['name'];
+        var tempValue = data['main']['temp'];
+        var windIndexValue = data['wind']['speed'];
+        var humidityValue = data['main']['humidity'];
+        var descValue = data['weather']['0']['description'];
+
+        name.innerHTML =nameValue;
+        temp.innerHTML =tempValue;
+        description.innerHTML =descValue;
+        humidity.innerHTML =humidityValue;
+        wind.innterHTML =windIndexValue;
+        console.log(nameValue);
+        console.log(tempValue);
+        console.log(descValue);
+        console.log(humidityValue);
+        console.log(windIndexValue);
+    })
+
+
+
+
 
     .catch(err => alert("Please pick a city!"))
 
-        });
+    });
+
     
 
