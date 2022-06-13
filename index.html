@@ -21,6 +21,7 @@
 
     <!-- START Project-->
     <!-- Jumbotron Strart-->
+    <div></div>
     <div class="jumbotron jumbotron-fluid border border-dark">
         <div class="container">
             <h1 class="display-4 w-100 p-3 text-center" style="background-color: #eee;">Your Weather</h1>
@@ -80,15 +81,27 @@
             <h3 class="currentTime"></h3>
             <div class="col-6 col-md-4"></div></div></div>
             <div class="list-group list-group-horizontal"> <ol id="foreCast" class="display border "></ol>
-                <li class="name "></li>
-                <li class="description "></li>
-              <li class="temp "></li>
-              <li class="windIndex "></li>
-              <li class="humidity "></li>
+                <li class="cityVal list-group-item-primary"></li>
+                <li class="description list-group-item-secondary "></li>
+              <li class="temp list-group-item-success "></li>
+              <li class="winds list-group-item-danger "></li>
+              <li class="humidity list-group-item-warning "></li>
           </div>
           </div>
         </div></div>
-            <div class="col-12 col-sm-6 col-md-8">5 day forecast</div>
+            <div class="col-12 col-sm-6 col-md-8 fiveDay">5 day forecast</div>
+
+            <ul class="list-group list-group-horizontal">
+            
+            
+            
+              <li class="list-group-item list-group-item-primary dayOne"></li>
+              <li class="list-group-item list-group-item-secondary dayTwo"></li>
+              <li class="list-group-item list-group-item-success dayThree"></li>
+              <li class="list-group-item list-group-item-danger dayFour"></li>
+              <li class="list-group-item list-group-item-warning dayFive"></li>
+
+              </ul>
           </div>
 
     
