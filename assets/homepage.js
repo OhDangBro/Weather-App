@@ -67,11 +67,7 @@ var retrievedObject = localStorage.getItem('cityKey', cityValues);
             description.innerHTML = " " +  " were seeing " + descValue + " " ;
             humidity.innerHTML = " " +  " with a humidity level of : " + humidityValue + " ";
             windIndex.innerHTML =" " +  " and a wind speed of: " + windIndexValue + " ";
-            // console.log(nameValue);
-            // console.log(tempValue);
-            // console.log(descValue);
-            // console.log(humidityValue);
-            // console.log(windIndexValue);
+            
             fiveDayForecast(latitude,longitude);
         })
 
@@ -112,6 +108,22 @@ function fiveDayForecast(lat,long) {
         catThree.innerHTML = "The UV index will be : " + humidityValueThree;
         catFour.innerHTML = "The UV index will be : " + humidityValueFour;
         catFive.innerHTML = "The UV index will be : " +  humidityValueFive;
+        function UV() { 
+            var goodUvIndex = [4,5,6,7];
+            if (goodUvIndex >= 3) {
+              document.getElementById("catsOne").classList.add('text-secondary');
+            }
+            else if (goodUvIndex = 4,5,6,7)
+            {
+              document.getElementById("catsOne").classList.add('text-success');
+            }  
+            else if (goodUvIndex)  
+            {
+              document.getElementById("catsOne").classList.add('text-danger');
+            }
+        };
+
+       UV();
         
         
         
