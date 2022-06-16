@@ -13,6 +13,12 @@ var dayThree = document.querySelector(".dayThree");
 var dayFour = document.querySelector(".dayFour");
 var dayFive = document.querySelector(".dayFive");
 var cityValues = []
+var catOne = document.querySelector(".catOne");
+var catTwo = document.querySelector(".catTwo");
+var catThree = document.querySelector(".catThree");
+var catFour = document.querySelector(".catFour");
+var catFive = document.querySelector(".catFive");
+
 
 
 
@@ -29,19 +35,24 @@ function showDate() {
 }
 
 button.addEventListener("click", function (event) {
-    console.log(event)
+    
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" +  inputValue.value +"&units=imperial&appid=e04fbf348ab68f01c8da11552c3c99df")
-        .then(response => response.json())
+       
+    .then(response => response.json())
+        
       
 
         .then(data => {
-            // console.log(data);
+            console.log(data);
             // console.log(inputValue.value);
             cityValues.push(inputValue.value);
             console.log(cityValues)
             localStorage.setItem("cityKey", cityValues);
             $(".list-groupss").append(`<li class="list-group-item">${inputValue.value}</li> `);
+    
 
+// Retrieve the object from localStorage
+var retrievedObject = localStorage.getItem('cityKey', cityValues);
 
             var nameValue = data['name'];
             var tempValue = data['main']['temp'];
@@ -51,11 +62,11 @@ button.addEventListener("click", function (event) {
             latitude = data.coord.lat;
             longitude = data.coord.lon;
 
-            cityVal.innerHTML = "Currently in" + nameValue + ":";
-            temp.innerHTML = "with a current temp of  : " + tempValue;
-            description.innerHTML = "were seeing " + descValue;
-            humidity.innerHTML = "with a humidity level of : " + humidityValue;
-            windIndex.innerHTML = "and a wind speed of: " + windIndexValue;
+            cityVal.innerHTML =" " + "Currently in " + nameValue + ": ";
+            temp.innerHTML = " " + " with a current temp of  : " + tempValue + " ";
+            description.innerHTML = " " +  " were seeing " + descValue + " " ;
+            humidity.innerHTML = " " +  " with a humidity level of : " + humidityValue + " ";
+            windIndex.innerHTML =" " +  " and a wind speed of: " + windIndexValue + " ";
             // console.log(nameValue);
             // console.log(tempValue);
             // console.log(descValue);
@@ -71,15 +82,37 @@ button.addEventListener("click", function (event) {
 function fiveDayForecast(lat,long) {
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+ lat +"&lon="+ long +"&cnt=100&units=imperial&appid=e04fbf348ab68f01c8da11552c3c99df")
     .then(response => response.json())
-    // console.log(data)
+    
+   
     .then(data => {
         console.log(data)
 
-        var dayOneValue = data.daily[0].temp.day;
-        var dayTwoValue = data.daily[1].temp.day;
-        var dayThreeValue = data.daily[2].temp.day;
-        var dayFourValue = data.daily[3].temp.day;
-        var dayFiveValue = data.daily[4].temp.day;
+        var dayOneValue = "The temperature is  " + data.daily[0].temp.day;
+        var dayTwoValue ="The temperature will be  " +  data.daily[1].temp.day;
+        var dayThreeValue ="The temperature will be  " +  data.daily[2].temp.day;
+        var dayFourValue ="The temperature will be  " +  data.daily[3].temp.day;
+        var dayFiveValue ="The temperature will be  " +  data.daily[4].temp.day;
+        var humidityValue = data.daily[0].uvi;
+        // if (humidityValue < 2) {
+        //     append.catOne.class = text-justify;
+        //   } else if (humidityValue  = 3,4,5,6,7) {
+        //     var element = document.getElementById("catsOne");
+        //     element.catsOne.add("text-justify");
+        //   } else { (humidityValue > 8)
+        //     append.catOne.class = text-justify;
+           
+        //   }
+        var humidityValueTwo = data.daily[1].uvi;
+        var humidityValueThree = data.daily[2].uvi;
+        var humidityValueFour = data.daily[3].uvi;
+        var humidityValueFive = data.daily[4].uvi;
+        console.log(humidityValue);
+        catOne.innerHTML = "The UV index is : " + humidityValue;
+        catTwo.innerHTML = "The UV index will be : " + humidityValueTwo;
+        catThree.innerHTML = "The UV index will be : " + humidityValueThree;
+        catFour.innerHTML = "The UV index will be : " + humidityValueFour;
+        catFive.innerHTML = "The UV index will be : " +  humidityValueFive;
+        
         
         
 

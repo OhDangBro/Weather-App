@@ -28,7 +28,10 @@
             <h1 class="display-4 w-100 p-3 text-center" style="background-color: #eee;">Your Weather</h1>
 
             <div class="container">
+              <h2>Search A City:</h2>
+
                 <div class="row">
+
                   <div class="col-sm">
                     <input type="text" class="inputValue w-auto-p-3" id="inputValue" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"></p>
@@ -71,49 +74,55 @@
 
 
 
-        <div class="row no-gutters ">
-            <h2 class="text-center">Todays weather:</h2>
+        <div class="row no-gutters justify-content-center ">
+            <h2 class="text-center justify-content-center">Todays weather:</h2>
             <h3 class="currentTime"></h3>
             <div class="col-6 col-md-4"></div></div></div>
-            <div class="list-group list-group-horizontal"> <ol id="foreCast" class="display border "></ol>
-                <li class="cityVal list-group-item-primary"></li>
-                <li class="description list-group-item-secondary "></li>
-              <li class="temp list-group-item-success "></li>
-              <li class="winds list-group-item-danger "></li>
-              <li class="humidity list-group-item-warning "></li>
+            <div class="list-group list-group-horizontal"> <ul id="foreCast" class="display border "></ul>
+                <li class="noBullet cityVal list-group-item-primary"></li>
+                <li class="noBullet description list-group-item-secondary "></li>
+              <li class="noBullet temp list-group-item-success "></li>
+              <li class="noBullet winds list-group-item-danger "></li>
+              <li class="noBullet humidity list-group-item-warning "></li>
           </div>
           </div>
         </div></div>
             <div class="col-12 col-sm-6 col-md-8 fiveDay">5 day forecast</div>
 
 
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-primary dateOne" id="dateOne">
+            <ul class=" noBullet list-group list-group-horizontal mx-auto">
+              <li class="noBullet list-group-item list-group-item-primary dateOne" id="dateOne">
                
               </li>
-              <li class="list-group-item list-group-item-primary"><img id="wicon" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="list-group-item list-group-item-primary dayOne"></li>
+              
+              <li class="noBullet list-group-item list-group-item-primary"><img id="wicon" src="" alt="Weather icon" class="wiconOne noBullet "></li>
+              <li class="noBullet list-group-item list-group-item-primary dayOne "></li>
+              <li id="catsOne" class =" catOne list-group-item list-group-item-primary"></li>
             </ul>
-            <ul class="list-group list-group-horizontal-sm">
-              <li class="list-group-item list-group-item-secondary dateTwo" id="dateTwo"></li>
-              <li class="list-group-item list-group-item-secondary">
-                <img id="wiconTwo" src="" alt="Weather icon" class="wiconOne"> </li>
-              <li class="list-group-item list-group-item-secondary dayTwo"></li>
+            <ul class="noBullet list-group list-group-horizontal-sm">
+              <li class="noBullet list-group-item list-group-item-secondary dateTwo" id="dateTwo"></li>
+              <li class="noBullet list-group-item list-group-item-secondary">
+                <img id="wiconTwo" src="" alt="Weather icon" class="noBullet wiconOne"> </li>
+              <li class="noBullet list-group-item list-group-item-secondary dayTwo"></li>
+              <li class="noBullet list-group-item list-group-item-secondary catTwo"></li>
             </ul>
-            <ul class="list-group list-group-horizontal-md">
-              <li class="list-group-item list-group-item-success dateThree" id="dateThree"></li>
-              <li class="list-group-item list-group-item-success"><img id="wiconThree" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="list-group-item list-group-item-success dayThree"></li>
+            <ul class="noBullet list-group list-group-horizontal-md">
+              <li class="noBullet list-group-item list-group-item-success dateThree" id="dateThree"></li>
+              <li class="noBullet list-group-item list-group-item-success"><img id="wiconThree" src="" alt="Weather icon" class="wiconOne"></li>
+              <li class="noBullet list-group-item list-group-item-success dayThree"></li>
+              <li  class="noBullet list-group-item list-group-item-success catThree"></li>
             </ul>
-            <ul class="list-group list-group-horizontal-lg">
-              <li class="list-group-item list-group-item-danger dateFour" id="dateFour"></li>
-              <li class="list-group-item list-group-item-danger"><img id="wiconFour" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="list-group-item list-group-item-danger dayFour"></li>
+            <ul class="noBullet list-group list-group-horizontal-lg">
+              <li class="noBullet list-group-item list-group-item-danger dateFour" id="dateFour"></li>
+              <li class="noBullet list-group-item list-group-item-danger"><img id="wiconFour" src="" alt="Weather icon" class="wiconOne"></li>
+              <li class="noBullet list-group-item list-group-item-danger dayFour"></li>
+              <li class="noBullet list-group-item list-group-item-danger catFour"></li>
             </ul>
-            <ul class="list-group list-group-horizontal-xl">
+            <ul class="noBullet list-group list-group-horizontal-xl">
               <li class="list-group-item list-group-item-warning dateFive" id="dateFive"></li>
-              <li class="list-group-item list-group-item-warning"><img id="wiconFive" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="list-group-item list-group-item-warning dayFive"></li>
+              <li class="noBullet list-group-item list-group-item-warning"><img id="wiconFive" src="" alt="Weather icon" class="wiconOne"></li>
+              <li class="noBullet list-group-item list-group-item-warning dayFive"></li>
+              <li class="noBullet list-group-item list-group-item-warning catFive"></li>
             </ul>
           
           
