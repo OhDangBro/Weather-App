@@ -2,147 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <link href="./assets/homepage.js">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link href="./assets/homepage.js">
 
 
-   
-
-     
-  
 
 
-    <!-- START Project-->
-    <!-- Jumbotron Strart-->
-    <div></div>
-    <div class="jumbotron jumbotron-fluid border border-dark">
-        <div class="container">
-            <h1 class="display-4 w-100 p-3 text-center" style="background-color: #eee;">Your Weather</h1>
 
+
+
+
+
+  <!-- START Project-->
+  <!-- Jumbotron Strart-->
+  <div></div>
+  <div class="jumbotron jumbotron-fluid border border-dark">
+    <div class="container">
+      <h1 class="display-4 w-100 p-3 text-center" style="background-color: #eee;">Your Weather</h1>
+
+      <div class="container">
+        <h2>Search A City:</h2>
+
+        <div class="row">
+
+          <div class="col-sm">
+            <input type="text" class="inputValue w-auto-p-3" id="inputValue" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"></p>
+
+
+            <div class="input-group-prepend">
+              <button class="text-center" id="button">Get Your Forecast</button>
+            </div>
+          </div>
+          <div class="col-sm">
+
+          </div>
+          <div class="col-sm">
             <div class="container">
-              <h2>Search A City:</h2>
+              <div class="row">
+                <div class="col">
+                  <h2 id="list" class="weatherLocation">Your Favorites:</h2>
+                  <ul class="list-groupss">
 
-                <div class="row">
 
-                  <div class="col-sm">
-                    <input type="text" class="inputValue w-auto-p-3" id="inputValue" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"></p>
-                  
-                
-                    <div class="input-group-prepend">
-                        <button class="text-center" id="button">Get Your Forecast</button>
-                    </div>
-                  </div>
-                  <div class="col-sm">
-                    
-                  </div>
-                  <div class="col-sm">
-                    <div class="container">
-                        <div class="row">
-                          <div class="col"><h2 id="list" class="weatherLocation">Your Favorites:</h2> 
-                            <ul class="list-groupss">
-                              
-                             
-                            </ul>
-                    
-                    
-        </div>
-    </div>
-                  </div>
+                  </ul>
+
+
                 </div>
               </div>
-
-
-            
-                  
-
-
-
-                    
-    <!--Jumbotron End-->
-
-    <body class="bg-info">
-
-
-
-
-        <div class="row no-gutters justify-content-center ">
-            <h2 class="text-center justify-content-center">Todays weather:</h2>
-            <h3 class="currentTime"></h3>
-            <div class="col-6 col-md-4"></div></div></div>
-            <div class="list-group list-group-horizontal"> <ul id="foreCast" class="display border "></ul>
-                <li class="noBullet cityVal list-group-item-primary"></li>
-                <li class="noBullet description list-group-item-secondary "></li>
-              <li class="noBullet temp list-group-item-success "></li>
-              <li class="noBullet winds list-group-item-danger "></li>
-              <li class="noBullet humidity list-group-item-warning "></li>
+            </div>
           </div>
-          </div>
-        </div></div>
-            <div class="col-12 col-sm-6 col-md-8 fiveDay">5 day forecast</div>
+        </div>
 
 
-            <ul class=" noBullet list-group list-group-horizontal mx-auto">
-              <li class="noBullet list-group-item list-group-item-primary dateOne" id="dateOne">
-               
-              </li>
-              
-              <li class="noBullet list-group-item list-group-item-primary"><img id="wicon" src="" alt="Weather icon" class="wiconOne noBullet "></li>
-              <li class="noBullet list-group-item list-group-item-primary dayOne "></li>
-              <li id="catsOne" class =" catOne list-group-item list-group-item-primary"></li>
-            </ul>
-            <ul class="noBullet list-group list-group-horizontal-sm">
-              <li class="noBullet list-group-item list-group-item-secondary dateTwo" id="dateTwo"></li>
-              <li class="noBullet list-group-item list-group-item-secondary">
-                <img id="wiconTwo" src="" alt="Weather icon" class="noBullet wiconOne"> </li>
-              <li class="noBullet list-group-item list-group-item-secondary dayTwo"></li>
-              <li class="noBullet list-group-item list-group-item-secondary catTwo"></li>
-            </ul>
-            <ul class="noBullet list-group list-group-horizontal-md">
-              <li class="noBullet list-group-item list-group-item-success dateThree" id="dateThree"></li>
-              <li class="noBullet list-group-item list-group-item-success"><img id="wiconThree" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="noBullet list-group-item list-group-item-success dayThree"></li>
-              <li  class="noBullet list-group-item list-group-item-success catThree"></li>
-            </ul>
-            <ul class="noBullet list-group list-group-horizontal-lg">
-              <li class="noBullet list-group-item list-group-item-danger dateFour" id="dateFour"></li>
-              <li class="noBullet list-group-item list-group-item-danger"><img id="wiconFour" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="noBullet list-group-item list-group-item-danger dayFour"></li>
-              <li class="noBullet list-group-item list-group-item-danger catFour"></li>
-            </ul>
-            <ul class="noBullet list-group list-group-horizontal-xl">
-              <li class="list-group-item list-group-item-warning dateFive" id="dateFive"></li>
-              <li class="noBullet list-group-item list-group-item-warning"><img id="wiconFive" src="" alt="Weather icon" class="wiconOne"></li>
-              <li class="noBullet list-group-item list-group-item-warning dayFive"></li>
-              <li class="noBullet list-group-item list-group-item-warning catFive"></li>
-            </ul>
-          
-          
-      </div>
-    
-                
 
 
-    
 
 
-    
-    
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="./assets/homepage.js"></script>
-        <!-- <script src="./assets/script.js>"></script> -->
-      <script>
-      
-      </script>
 
-    </div>
+
+        <!--Jumbotron End-->
+
+<body class="bg-info">
+
+
+
+  <!-- CURRENT WEATHER START--------------->
+  <div class="row no-gutters justify-content-center ">
+    <h2 class="text-center justify-content-center">Todays weather:</h2>
+    <h3 class="currentTime"></h3>
+    <div class="col-6 col-md-4"></div>
+  </div>
+  </div>
+  <div class="list-group list-group-horizontal">
+    <ul id="foreCast" class="display border "></ul>
+    <li class="noBullet cityVal list-group-item-primary"></li>
+    <li class="noBullet description list-group-item-secondary "></li>
+    <li class="noBullet temp list-group-item-success "></li>
+    <li class="noBullet winds list-group-item-danger "></li>
+    <li class="noBullet humidity list-group-item-warning "></li>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- Five Day START ------------------------->
+  <div class="col-12 col-sm-6 col-md-8 fiveDay">5 day forecast</div>
+
+  <!-- Bottom Current Weather --------------->
+  <ul class=" noBullet list-group list-group-horizontal mx-auto">
+    <li class="noBullet list-group-item list-group-item-primary dateOne" id="dateOne">
+
+    </li>
+
+    <li class="noBullet list-group-item list-group-item-primary"><img id="wicon" src="" alt="Weather icon"
+        class="wiconOne noBullet "></li>
+    <li class="noBullet list-group-item list-group-item-primary dayOne "></li>
+    <li id="catsOne" class=" catOne list-group-item list-group-item-primary"></li>
+  </ul>
+  <!-- Bottom Current Weather Day ONE END --------------->
+  <!-- Bottom Current Weather Day Two --------------->
+  <ul class="noBullet list-group list-group-horizontal-sm">
+    <li class="noBullet list-group-item list-group-item-secondary dateTwo" id="dateTwo"></li>
+    <li class="noBullet list-group-item list-group-item-secondary">
+      <img id="wiconTwo" src="" alt="Weather icon" class="noBullet wiconOne">
+    </li>
+    <li class="noBullet list-group-item list-group-item-secondary dayTwo"></li>
+    <li id="catsOne" class="noBullet list-group-item list-group-item-secondary catTwo"></li>
+  </ul>
+  <!-- Bottom Current Weather Day TWO END --------------->
+  <!-- Bottom Current Day Three Weather --------------->
+  <ul class="noBullet list-group list-group-horizontal-md">
+    <li class="noBullet list-group-item list-group-item-success dateThree" id="dateThree"></li>
+    <li class="noBullet list-group-item list-group-item-success"><img id="wiconThree" src="" alt="Weather icon"
+        class="wiconOne"></li>
+    <li class="noBullet list-group-item list-group-item-success dayThree"></li>
+    <li id="catsOne" class="noBullet list-group-item list-group-item-success catThree"></li>
+  </ul>
+  <!-- Bottom Current Weather Day Three END --------------->
+  <!-- Bottom Current Weather Day Four --------------->
+  <ul class="noBullet list-group list-group-horizontal-lg">
+    <li class="noBullet list-group-item list-group-item-danger dateFour" id="dateFour"></li>
+    <li class="noBullet list-group-item list-group-item-danger"><img id="wiconFour" src="" alt="Weather icon"
+        class="wiconOne"></li>
+    <li class="noBullet list-group-item list-group-item-danger dayFour"></li>
+    <li id="catsOne" class="noBullet list-group-item list-group-item-danger catFour"></li>
+  </ul>
+  <!-- Bottom Current Weather Day FOUR END --------------->
+  <!-- Bottom Current Weather Day Five START --------------->
+  <ul class="noBullet list-group list-group-horizontal-xl">
+    <li class="list-group-item list-group-item-warning dateFive" id="dateFive"></li>
+    <li class="noBullet list-group-item list-group-item-warning"><img id="wiconFive" src="" alt="Weather icon"
+        class="wiconOne"></li>
+    <li class="noBullet list-group-item list-group-item-warning dayFive"></li>
+    <li id="catsOne" class="noBullet list-group-item list-group-item-warning catFive"></li>
+  </ul>
+</div>
+  <!-- Bottom Current Weather Day Five END --------------->
+
+
+  
+<!--- SCRIPT TAGS START------------>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/homepage.js"></script>
+ 
+  <!--- SCRIPT TAGS END------------>
+
+  </div>
 </body>
