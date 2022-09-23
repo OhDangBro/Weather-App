@@ -20,7 +20,7 @@ var dayFive = document.querySelector(".dayFive");
 var latitutde = "";
 var longitude = "";
 
-// value for local storage //
+// value for locid="dayOneValue"al storage //
 var cityValues = []
 
 
@@ -39,7 +39,8 @@ button.addEventListener("click", function (event) {
             console.log(data);
             cityValues.push(inputValue.value);
             localStorage.setItem("cityKey", cityValues);
-            $(".list-groupss").append(`<li class="list-group-item">${inputValue.value}</li> `);
+            $(".list-groupss").append(`<p class="list-groupss">${inputValue.value}</p> `);
+            console.log(data)
     
 
             // Retrieve the object from localStorage
