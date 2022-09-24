@@ -25,21 +25,23 @@
   <div></div>
   <div class="jumbotron jumbotron-fluid border border-dark">
   
-      <h1 class="titleForecast text-center" >Forecast</h1>
+      <h1 class="titleForecast text-center" >
+       <img class="imgForecast" src="./assets/img/farenheit.png"> orecast
+      </h1>
 
-      <div class="container">
+      <div class="searchSection">
         <h2>Search A City:</h2>
 
-        <div class="row">
+        
 
           <div class="col-sm">
             <input type="text" class="inputValue w-auto-p-3" id="inputValue" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"></p>
+              aria-describedby="inputGroup-sizing-default">
 
 
-            <div class="input-group-prepend">
-              <button class="text-center" id="button">Get Your Forecast</button>
-            </div>
+            
+              <button class="text-center" id="button"><img class="searchimg" src="./assets/img/magnifying-glass.png"></button>
+            
           </div>
           
 
@@ -57,9 +59,9 @@
 
   <!-- CURRENT WEATHER START--------------->
  
-  </div>
-  <div class=" list-group-horizontal">
-    <ul id="foreCast" class="display border "></ul>
+ 
+  <div class="currentWeather">
+    <ul id="foreCast"></ul>
     <p class="cityVal"></p>
     <p class="description "></p>
     <p class="temp"></p>
@@ -76,10 +78,10 @@
   
   
   
-  
-  <!-- Bottom Current Weather --------------->
+  <div class="allCards">
+  <!-- Start day one Weather --------------->
 
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
+  <div class="card bg-light" style="max-width: 18rem;">
     <div class="card-header" id="dateOne"></div>
     <div class="card-body">
       <h5 class="card-title" ></h5>
@@ -88,13 +90,13 @@
     <p id="catsOne" class="catOne "></p>
     </div>
   </div>
-  <!-- Bottom Current Weather Day ONE END --------------->
+  <!-- Day ONE END --------------->
 
 
 
 
 
-  <!-- Bottom Current Weather Day Two --------------->
+  <!-- Start Current Weather Day Two --------------->
   <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header" id="dateTwo"></div>
     <div class="card-body">
@@ -108,7 +110,7 @@
 
 
 
-  <!-- Bottom Current Day Three Weather --------------->
+  <!-- start Current Day Three Weather --------------->
   <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header" id="dateThree"></div>
     <div class="card-body">
@@ -146,6 +148,7 @@
     </div>
   </div>   
   <!-- Bottom Current Weather Day Five END --------------->
+</div>
 
 
   

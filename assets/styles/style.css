@@ -3,19 +3,37 @@
   align-items: center;
 }
 
+img.imgForecast{
+  size:40px;
+}
+
+h1 {
+  color: #72b4ff;
+  border-radius:  90px;;
+}
+
+.searchSection {
+  size: 50px;
+  text-align: center;
+}
+
+button, input, optgroup, select, textarea {
+  margin: -3px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: #6eb4fd;
+}
 
 .jumbotron {
         /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../img/weather.gif");
-      
-        /* Set a specific height */
-        height: 50%;
-      
-        /* Position and center the image to scale nicely on all screens */
-        background-position: center;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.2)), url("../img/cloud.gif");
+        border: 2px solid black;
+        padding: 25px;
         background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        height: 55%;
+        background-color: #6eb4fd;
       }
 
 .titleForecast {
@@ -30,9 +48,56 @@
   width: 50%;
 }
 
+
+
 img#wicon {
     justify-content: center !important;
     justify-self: center;
+}
+
+.allCards {
+    align-content: center;
+      margin-left: 573px;
+  }
+
+
+body {
+  text-align: center;
+ background-color: #8bc4fe;
+
+}
+
+.currentWeather {
+  text-align: center;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background-color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
+  padding: 1.25rem;
+  background-color: #c6e1ff;
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1pxsolidrgba(0,0,0,.125);
+  background-color: #6eb4fd;
+  
+}
+
+@media (min-width: 1200px) {
+.container {
+    max-width: 1211px;
+}
+}
+
+@media (min-width: 576px) {
+.container {
+    max-width: 540px;
+}
 }
 
 
