@@ -48,6 +48,9 @@ button, input, optgroup, select, textarea {
   width: 50%;
 }
 
+blank {
+  background-color: #6eb4fd;
+}
 
 
 img#wicon {
