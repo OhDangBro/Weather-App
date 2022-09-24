@@ -1,0 +1,38 @@
+.daySectionOne {
+  border-radius: 80px;
+  align-items: center;
+}
+
+
+.jumbotron {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../img/weather.gif");
+      
+        /* Set a specific height */
+        height: 50%;
+      
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+.titleForecast {
+    opacity: 85%;
+    border: none;
+}
+
+.wOne {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+img#wicon {
+    justify-content: center !important;
+    justify-self: center;
+}
+
+
